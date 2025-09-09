@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build: ./sb-chatgpt
+    ports:
+      - "8080:8080"
+  frontend:
+    build: ./chatgpt-react
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend

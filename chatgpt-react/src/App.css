@@ -1,0 +1,197 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Remove default card padding */
+.card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
+  width: 320px;   /* smaller width */
+  height: 450px;  /* smaller height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center page content */
+/* Background stays warm */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Centers the card and adds breathing room top/bottom */
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 0;          /* 👈 margin-like space at top/bottom */
+}
+
+/* Smaller card */
+
+.card.chat-card {
+  width: 500px;                    /* make it roomy */
+  height: 350px;                   /* total height of the card */
+  display: flex;                   /* key: enable column layout */
+  flex-direction: column;          /* header, chat, footer stack */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.chat-card {
+  width: 500px;             /* narrower */
+  height: 600px;            /* shorter */
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  background: #fff;         /* solid */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex: 1;                     /* expands to fill between header & footer */
+  padding: 1rem;
+  background: #fffdf9;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* Warm header (overrides bootstrap blue) */
+.custom-header,
+.card-header.custom-header {
+  background: linear-gradient(135deg, #ff7b54, #ff9966) !important;
+  color: #fff !important;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px 12px;
+  border-bottom: none;
+}
+
+/* Messages area */
+.card-body.chat-box {
+  flex: 1;
+  background: #fffaf6;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Input bar pinned at bottom */
+.card-footer {
+  background: #fafafa;
+  border-top: 1px solid #e8e8e8;
+  padding: 8px;
+}
+
+/* Message bubbles */
+.message {
+  max-width: 78%;
+  padding: 8px 12px;
+  margin: 6px 0;
+  border-radius: 16px;
+  word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.35;
+  clear: both;
+}
+
+.message.user {
+  background: #ffdac1;                /* warm orange (you) */
+  color: #2b2b2b;
+  margin-left: auto;                   /* right align */
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background: #ffe5d9;                /* peach (bot) */
+  color: #2b2b2b;
+  margin-right: auto;                  /* left align */
+  border-bottom-left-radius: 4px;
+}
+
+/* Input tweaks */
+.input-group input {
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  padding: 6px 10px;
+}
+
+.input-group button {
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: #ff7b54;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+}
+.input-group button:hover {
+  background: #ff6a3a;
+}
+
+
+/* User bubble */
+.bg-primary {
+  background: #ff914d !important;
+  border-radius: 20px 20px 0 20px !important;
+  font-size: 14px;
+  padding: 6px 10px;
+  color: white !important;
+  display: inline-block;
+  max-width: 80%;
+  text-align: left;
+}
+
+/* Bot bubble */
+.bg-light {
+  background: #ffe5d9 !important;
+  border-radius: 20px 20px 20px 0 !important;
+  font-size: 14px;
+  padding: 6px 10px;
+  color: #333 !important;
+  display: inline-block;
+  max-width: 80%;
+  text-align: left;
+}
+
+/* Buttons */
+.btn-primary {
+  background: #ff7e5f;
+  border: none;
+}
+.btn-primary:hover {
+  background: #eb684a;
+}
+
+.btn-outline-light {
+  border: 1px solid white;
+}
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Input */
+.form-control {
+  border-radius: 15px;
+  border: 1px solid #ffd1ba;
+}
+
+.placeholder-message {
+  text-align: center;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 40%;
+  font-size: 0.9rem;
+}
