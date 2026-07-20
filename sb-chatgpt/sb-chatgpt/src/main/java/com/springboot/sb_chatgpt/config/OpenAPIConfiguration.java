@@ -12,15 +12,15 @@ public class OpenAPIConfiguration {
     @Value("${openapi.api.url}")
     private String apiUrl;
 
-    @Value("${openapi.api.key}")
+    @Value("${OPENAI_API_KEY:}")
     private String apiKey;
 
     @Bean
     public RestClient restClient()  {
         return RestClient.builder()
-                .baseUrl("https://api.openai.com/v1")       // 👈 base URL here
+                .baseUrl("https://api.openai.com/v1")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, "application/json")
-                .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey) // 👈 auth here
+                .defaultHeader(HttpHeaders.AUTHORIZATION, "Bearer " + apiKey)
                 .build();
     }
 }
