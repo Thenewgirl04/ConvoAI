@@ -9,6 +9,9 @@ import org.springframework.web.client.RestClient;
 @Configuration
 public class OpenAPIConfiguration {
 
+    @Value("${openapi.api.url}")
+    private String apiUrl;
+
     @Value("${OPENAI_API_KEY:}")
     private String apiKey;
 
