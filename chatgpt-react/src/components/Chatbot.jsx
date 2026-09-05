@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const STORAGE_KEY = "chat.sessionId";
 const MODE_STORAGE_KEY = "chat.mode";
