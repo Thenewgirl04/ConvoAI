@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
 # Copy the Spring Boot JAR into the container
-COPY sb-chatgpt/target/sb-chatgpt-0.0.1-SNAPSHOT.jar app.jar
+COPY sb-backend/target/sb-chatgpt-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the backend port
 EXPOSE 8080
