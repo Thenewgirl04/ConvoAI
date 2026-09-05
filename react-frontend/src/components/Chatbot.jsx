@@ -4,7 +4,7 @@ import axios from "axios";
 const STORAGE_KEY = "chat.sessionId";
 const MODE_STORAGE_KEY = "chat.mode";
 const CLIENT_ID_KEY = "chat.clientId";
-const API_BASE = "http://localhost:8080/api";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8080/api";
 
 const toSender = (role) => (role === "user" ? "user" : "bot");
 
@@ -201,6 +201,8 @@ const ChatBot = () => {
   }, [messages]);
 
   return (
+      <>
+        <h2 className="app-heading">CONVOAI</h2>
     <div className="page-shell">
       <aside className="session-sidebar">
         <div className="session-sidebar-header">
@@ -319,6 +321,7 @@ const ChatBot = () => {
         </div>
       </div>
     </div>
+      </>
   );
 };
 

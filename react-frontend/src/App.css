@@ -5,6 +5,16 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
+.app-heading {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  text-align: center;
+  color: #ffffff;
+}
+
 .page-shell {
   min-height: 100vh;
   display: flex;
@@ -126,7 +136,7 @@ body {
 
 .card.chat-card {
   width: 500px;                    /* make it roomy */
-  height: 350px;                   /* total height of the card */
+  height: 600px;                   /* total height of the card */
   display: flex;                   /* key: enable column layout */
   flex-direction: column;          /* header, chat, footer stack */
   border-radius: 12px;
